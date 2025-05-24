@@ -131,7 +131,7 @@
 
 上传东西之后，不给任何返回，虽然响应码为200，但无法判断是否上传成功，这里由于在内部，可以和研发沟通之前找到的敏感信息，猜测上传成功后文件的位置，让研发帮忙看一下。
 
-<img src="image-20250521142346305.png" alt="image-20250521142346305.png" style="zoom:100%;" />
+
 
 ### 6.进一步的尝试【新】
 
@@ -139,25 +139,17 @@
 ajp漏洞 对webINF目录下的文件读取
 ```
 
-
-
-![image-20250524101128572](pictures/image-20250524101128572.png)
-
-
+<img src=".\pictures\image-20250524101128572.png" alt="image-20250524101128572.png" style="zoom:100%;" />
 
 ```
 python2 CNVD-2020-10487-Tomcat-Ajp-lfi.py ip -p 8009 -f WEB-INF/classes/applicationContext.xml
 ```
 
-![image-20250521171414394](.\pictures\image-20250521171414394.png)
-
-![image-20250524101310639](pictures/image-20250524101310639.png)
+<img src=".\pictures\image-20250524101310639.png" alt="image-20250524101310639.png" style="zoom:100%;" />
 
 ```
 使用mysql:password 成功登录数据库
 ```
-
-![image-20250521171949485](.\pictures\image-20250521171949485.png)
 
 ![image-20250524101415033](pictures/image-20250524101415033.png)
 
@@ -167,21 +159,19 @@ python2 CNVD-2020-10487-Tomcat-Ajp-lfi.py ip -p 8009 -f WEB-INF/classes/applicat
 具备FILE权限
 ```
 
-![image-20250521172346662](.\pictures\image-20250521172346662.png)
+![image-20250521172346662](pictures/image-20250521172346662.png)
 
 ```
 可任意位置写文件
 ```
 
-![image-20250521173729860](.\pictures\image-20250521173729860-17479798119231.png)
+![image-20250521173729860-17479798119231](pictures/image-20250521173729860-17479798119231.png)
 
 
 
-![image-20250521174002500](.\pictures\image-20250521174002500.png)
+![image-20250521174002500](pictures/image-20250521174002500.png)
 
 入口点 [ http://124.160.225.82:9901/m/download/download.jsp](http://124.160.225.82:9901/m/download/download.jsp) getshell
-
-![image-20250523192628071](./pictures/image-20250523192628071.png)
 
 ![image-20250524101511230](pictures/image-20250524101511230.png)
 
