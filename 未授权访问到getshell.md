@@ -171,7 +171,7 @@ python2 CNVD-2020-10487-Tomcat-Ajp-lfi.py ip -p 8009 -f WEB-INF/classes/applicat
 
 ![image-20250521174002500](pictures/image-20250521174002500.png)
 
-入口点 [ http://124.160.225.82:9901/m/download/download.jsp](http://124.160.225.82:9901/m/download/download.jsp) getshell
+入口点  ***********/m/download/download.jsp getshell
 
 ![image-20250524101511230](pictures/image-20250524101511230.png)
 
